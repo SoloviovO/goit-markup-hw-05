@@ -14,6 +14,9 @@
   --main-icon-color: #afb1b8;
   --main-icon-bg-color: rgba(255, 255, 255, 0.1);
   --box-bg-color: rgba(47, 48, 58, 0.8);
+  --main-action-color: rgba(33, 150, 243, 0.9);
+  --backdrop-color: rgba(0, 0, 0, 0.2);
+  --btn-close-border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ==================== Глобальні стилі ====================*/
@@ -555,14 +558,6 @@ ul {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .kind-photo-box::after {
-  display: inline-block;
-  content: '';
-  width: 100px;
-  height: 100px;
-  background-color: #188ce8;
-} */
-
 .kind-card {
   padding: 20px 24px;
   border: 1px solid var(--main-border-color);
@@ -587,3 +582,49 @@ ul {
 
 /* ==================== Картки ====================*/
 /* ==================== Портфоліо ====================*/
+
+/* ==================== Бекддроп і модалки ============*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  background: var(--main-light-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: var(--main-light-color);
+  border: 1px solid var(--btn-close-border-color);
+  border-radius: 50%;
+}
+
+/* ==================== Бекддроп і модалки ============*/
