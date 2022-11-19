@@ -13,6 +13,7 @@
   --gradient-color: rgba(47, 48, 58, 0.4);
   --main-icon-color: #afb1b8;
   --main-icon-bg-color: rgba(255, 255, 255, 0.1);
+  --box-bg-color: rgba(47, 48, 58, 0.8);
 }
 
 /* ==================== Глобальні стилі ====================*/
@@ -120,10 +121,7 @@ ul {
 
 .site-nav {
   display: flex;
-}
-
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
+  gap: 50px;
 }
 
 .site-nav-link {
@@ -151,10 +149,7 @@ ul {
 .contacts {
   display: flex;
   margin-left: auto;
-}
-
-.contacts-item:not(:last-child) {
-  margin-right: 30px;
+  gap: 30px;
 }
 
 .contacts-link {
@@ -183,20 +178,17 @@ ul {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--primary-bg-color);
-  text-align: center;
-}
-
-.overlay {
   margin-left: auto;
   margin-right: auto;
+
   max-width: 1600px;
-  height: 600px;
   background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
     url(../images/overlay.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: var(--primary-bg-color);
+  text-align: center;
 }
 
 .hero-title {
@@ -285,6 +277,8 @@ ul {
 }
 
 .actings-item {
+  position: relative;
+
   width: 370px;
 }
 
@@ -295,6 +289,26 @@ ul {
   line-height: calc(42 / 36);
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+.actings-box {
+  position: absolute;
+  bottom: 0;
+
+  padding: 27px;
+  text-align: center;
+  width: 370px;
+  height: 70px;
+  background-color: var(--box-bg-color);
+}
+
+.actings-image-title {
+  color: var(--main-light-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* ==================== Чим ми займаємося ====================*/
@@ -319,7 +333,7 @@ ul {
 }
 
 .team-data {
-  padding: 30px 32px;
+  padding: 30px;
 }
 
 .team-member {
@@ -341,7 +355,8 @@ ul {
 
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social-link {
@@ -370,7 +385,7 @@ ul {
 
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .clients-link {
@@ -471,11 +486,6 @@ ul {
   display: flex;
 }
 
-.social {
-  display: flex;
-  justify-content: space-between;
-}
-
 .social-link-footer {
   color: var(--main-light-color);
   background-color: var(--main-icon-bg-color);
@@ -532,22 +542,24 @@ ul {
   gap: 30px;
 }
 
-.kind-link {
-  display: block;
-  width: 370px;
-}
-
 .kind-link:hover,
 .kind-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+/* .kind-photo-box::after {
+  display: inline-block;
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: #188ce8;
+} */
+
 .kind-card {
   padding: 20px 24px;
-  border-bottom: 1px solid var(--main-border-color);
-  border-left: 1px solid var(--main-border-color);
-  border-right: 1px solid var(--main-border-color);
+  border: 1px solid var(--main-border-color);
+  border-top: none;
 }
 
 .kind-title {
