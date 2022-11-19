@@ -367,6 +367,7 @@ ul {
   height: 44px;
   border-radius: 50%;
   color: var(--main-icon-color);
+  outline: transparent;
 }
 
 .social-link:hover,
@@ -398,6 +399,7 @@ ul {
   color: var(--main-icon-color);
   border: 1px solid;
   border-radius: 4px;
+  outline: transparent;
 }
 
 .clients-link:hover,
@@ -544,6 +546,7 @@ ul {
 
 .kind-link {
   display: block;
+  outline: transparent;
 }
 
 .kind-link:hover,
