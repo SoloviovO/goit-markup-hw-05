@@ -621,7 +621,8 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.kind-link:hover .kind-description {
+.kind-link:hover .kind-description,
+.kind-link:focus .kind-description {
   transform: translateX(0);
 }
 
